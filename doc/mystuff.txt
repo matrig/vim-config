@@ -1,0 +1,30 @@
+*mystuff.txt*  My shortcuts
+
+Author:  Mattia Rigotti <mr2666@columbia.edu>	*mystuff-author*
+
+
+SHORT-CUTS                                      *mystuff-short-cuts*
+
+\mt : Toggles ShowMarks on and off.
+z/  : Turn on and off highlighting  current autohighlight.
+\s 	: Start search in searchfold.
+\t 	: Start search in tasklist. Close with q
+\g      : Toggle GUndo
+
+USEFUL COMMANDS                                 *mystuff-commands*
+
+:helptags ~/.vim/doc/	: generate helptags
+set spell		: using spelling
+:TlistToggle 	: the taglist window
+
+WRAPPING STUFF
+
+:set wrap       : wrap words visually
+:set linebreak  : only break at a breakable character
+:set nolist     : list disables linebreak
+
+
+To delete ^M at line endings, and replace it with a space everywhere else
+:%s/\r\+$//e
+:%s/\r/ /gce
+
