@@ -32,13 +32,6 @@
     "set spell                      " spell checking on
     set spelllang=en_us             " Set spelling language.
 
-
-    if has("vms")
-        set nobackup                " do not keep a backup file, use versions instead
-    else
-        set backup                  " keep a backup file
-    endif
-
     set backup                      " Backups are nice
     set noswapfile
 
