@@ -137,6 +137,7 @@
     set nowrap                      " wrapping makes windows look ugly
     "set wrap                        " wrap lines visually
     set linebreak                   " wrap at breakat characters
+    set nolist
     set autoindent                  " always set autoindenting on
     "set colorcolumn=85             " Shows a colored columne at 85
     set diffopt+=iwhite             " ignore whitespaces in diffs
