@@ -16,8 +16,8 @@
     " }
 
     " Load pathogen {
-        call pathogen#helptags()
         call pathogen#infect()
+        call pathogen#helptags()
     " }
 " }
 
