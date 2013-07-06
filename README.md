@@ -11,11 +11,15 @@ Clone with:
 Adding a new submodule
 ----------------------
 
+To add another package hosted on github as a submodule:
+
     git submodule add git://github.com/path_to/submodule.git ./bundle/submodule_name    
     git submodule init && git submodule update
     
 Updating all submodules
 -----------------------
+
+To update all the submodules:
 
     git submodule foreach git pull origin master
     git commit -am "Pulled down update to submodules"
