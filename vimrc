@@ -235,6 +235,11 @@
         " let g:tex_flavor='latex'
     " }
 
+    " Matchit {
+        " maps % to tab in normal mode
+        nmap <Tab> %
+    " }
+
     " Ctags {
         " This will look in the current directory for 'tags', and work up the tree towards root until one is found.
         " (generate tags with: ctags -R -f ~/vimtags /usr/lib/python2.6/)
