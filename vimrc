@@ -70,7 +70,7 @@
         " For all text files set 'textwidth' to 72 characters.
         autocmd FileType text setlocal textwidth=72
         autocmd FileType cpp,c setlocal shiftwidth=4 omnifunc=ccomplete#Complete
-        autocmd FileType python set omnifunc=pythoncomplete#Complete
+        autocmd FileType python set omnifunc=pythoncomplete#Complete 
         autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
         autocmd FileType html,xml set omnifunc=htmlcomplete#CompleteTags listchars-=tab:»·
         autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -271,6 +271,7 @@
         " Do not auto open cwindow if errors be found
         let g:pymode_lint_cwindow = 0
         let g:pymode_lint_ignore = "E226"
+        let g:pymode_rope_autocomplete_map = '<Tab>'
     " }
 
     " Easymotion {
