@@ -24,4 +24,5 @@ To update all the submodules:
     git submodule foreach git pull origin master
     
 or
+
     git submodule update --recursive
