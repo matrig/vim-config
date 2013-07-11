@@ -83,7 +83,7 @@
     set t_Co=256                    " enable 256 colors
     let g:solarized_termcolors=256
     set background=dark             " assume a dark background
-    colorscheme ir_black "blackboard "mustang matlabdark  matlablight
+    colorscheme wombat "molokai ir_black blackboard mustang matlabdark  matlablight
 
     set showmode                    " display the current mode
 
@@ -218,28 +218,6 @@
 " }
 
 " Plugins {
-
-    " OmniComplete {
-        " If you prefer the Omni-Completion tip window to close when a selection is
-        " made, these lines close it on movement in insert mode or when leaving
-        " insert mode
-        autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-        autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-        set completeopt=menu,preview,longest
-    " }
-
-    " Latex {
-        " Starting with Vim 7, the filetype of empty .tex files defaults to
-        " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-        " The following changes the default filetype back to 'tex':
-        " let g:tex_flavor='latex'
-    " }
-
-    " Matchit {
-        " maps % to tab in normal mode
-        nmap <Tab> %
-    " }
-
     " Ctags {
         " This will look in the current directory for 'tags', and work up the tree towards root until one is found.
         " (generate tags with: ctags -R -f ~/vimtags /usr/lib/python2.6/)
@@ -248,63 +226,7 @@
         " map <A-]>   :vsp <CR>:exec("tag ".expand("<cword>"))<CR>      " A-] - Open the definition in a vertical split
     " }
 
-    " TagBar {
-        map <F8>    :TagbarToggle<cr>
-        let g:tagbar_left = 1
-    " }
-
-    " NERDCommentators {
-        let NERDSpaceDelims = 1
-    " }
-
-    " Showmarks {
-        " Showmarks disabled by default (toggle with \mt):
-        let g:showmarks_enable=0
-    " }
-
-    " Syntastic {
-        let g:syntastic_enable_signs=1
-        let g:syntastic_quiet_warnings=1
-    " }
-
-    " python-mode {
-        " Checking code every save
-        let g:pymode_lint_write = 1
-        " Switch pylint, pyflakes, pep8, mccabe code-checkers
-        " Can have multiply values "pep8,pyflakes,mcccabe"
-        let g:pymode_lint_checker = "pyflakes,mccabe"
-        " Do not auto open cwindow if errors be found
-        let g:pymode_lint_cwindow = 0
-        let g:pymode_lint_ignore = "E226"
-        let g:pymode_rope_autocomplete_map = '<Tab>'
-    " }
-
-    " Easymotion {
-        "let g:EasyMotion_leader_key = '<Tab>'
-    " }
-
-    " NerdTree {
-        map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
-        map <leader>e :NERDTreeFind<CR>
-        nmap <leader>nt :NERDTreeFind<CR>
-
-        let NERDTreeShowBookmarks=1
-        let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
-        let NERDTreeChDirMode=0
-        let NERDTreeQuitOnOpen=1
-        let NERDTreeMouseMode=2
-        let NERDTreeShowHidden=1
-        let NERDTreeKeepTreeInNewTab=1
-        let g:nerdtree_tabs_open_on_gui_startup=0
-    " }
-
-    " UndoTree {
-        nnoremap <leader>u :UndotreeToggle<CR>
-        " If undotree is opened, it is likely one wants to interact with it.
-        let g:undotree_SetFocusWhenToggle=1
-    " }
-
-    " ctrlp {
+    " Ctrlp {
         let g:ctrlp_working_path_mode = 2
         nnoremap <silent> <D-t> :CtrlP<CR>
         nnoremap <silent> <D-r> :CtrlPMRU<CR>
@@ -320,6 +242,74 @@
             \ 'fallback': 'find %s -type f'
         \ }
     "}
+
+    " Matchit {
+        " maps % to tab in normal mode
+        nmap <Tab> %
+    " }
+
+    " NERDCommentators {
+        let NERDSpaceDelims = 1
+    " }
+
+    " NERDTree {
+        map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+        map <leader>e :NERDTreeFind<CR>
+        nmap <leader>nt :NERDTreeFind<CR>
+
+        let NERDTreeShowBookmarks=1
+        let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+        let NERDTreeChDirMode=0
+        let NERDTreeQuitOnOpen=1
+        let NERDTreeMouseMode=2
+        let NERDTreeShowHidden=1
+        let NERDTreeKeepTreeInNewTab=1
+        let g:nerdtree_tabs_open_on_gui_startup=0
+    " }
+
+    " OmniComplete {
+        " If you prefer the Omni-Completion tip window to close when a selection is
+        " made, these lines close it on movement in insert mode or when leaving
+        " insert mode
+        autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+        autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+        set completeopt=menu,preview,longest
+    " }
+
+    " python-mode {
+        " Checking code every save
+        let g:pymode_lint_write = 1
+        " Switch pylint, pyflakes, pep8, mccabe code-checkers
+        " Can have multiply values "pep8,pyflakes,mcccabe"
+        let g:pymode_lint_checker = "pylint,pyflakes"
+        " Do not auto open cwindow if errors be found
+        let g:pymode_lint_cwindow = 0
+        let g:pymode_lint_ignore = "E226,C0301,C0324"
+        let g:pymode_rope_autocomplete_map = '<C-Space>'
+    " }
+
+    " Showmarks {
+        " Showmarks disabled by default (toggle with \mt):
+        let g:showmarks_enable=0
+    " }
+
+    " Syntastic {
+        let g:syntastic_enable_signs=1
+        let g:syntastic_quiet_warnings=1
+	let g:syntastic_python_checkers=['pylint']
+    " }
+
+    " TagBar {
+        map <F8>    :TagbarToggle<cr>
+        let g:tagbar_left = 1
+    " }
+
+    " UndoTree {
+        nnoremap <leader>u :UndotreeToggle<CR>
+        " If undotree is opened, it is likely one wants to interact with it.
+        let g:undotree_SetFocusWhenToggle=1
+    " }
+
 " }
 
 " My commands {
