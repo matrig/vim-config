@@ -81,9 +81,11 @@
 
 " Vim UI {
     set t_Co=256                    " enable 256 colors
-    let g:solarized_termcolors=256
+    " let g:solarized_termcolors = 256
+    " let g:solarized_contrast = "high"
+    " let g:solarized_degrade = 0
     set background=dark             " assume a dark background
-    colorscheme wombat "molokai ir_black blackboard mustang matlabdark  matlablight
+    colorscheme wombat "solarized molokai ir_black blackboard mustang matlabdark  matlablight
 
     set showmode                    " display the current mode
 
@@ -147,7 +149,6 @@
     set shiftwidth=4                " number of spaces to use for each (auto)indent step
     set shiftround                  " round indent to multiple of 'shiftwidth'
     set softtabstop=4               " let backspace delete indent
-    set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
 " }
 
 " Key (re)Mappings {
@@ -213,8 +214,8 @@
     nnoremap <C-l> <C-w>l
 
     " Toggle auto-indenting for code paste
-    nnoremap <F2> :set invpaste paste?<CR>
-    set pastetoggle=<F2>
+    nnoremap <F12> :set invpaste paste?<CR>
+    set pastetoggle=<F12>
 " }
 
 " Plugins {
