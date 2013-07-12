@@ -228,6 +228,19 @@
     " Toggle auto-indenting for code paste
     nnoremap <F12> :set invpaste paste?<CR>
     set pastetoggle=<F12>
+
+    " Copying text to the system clipboard.
+    "
+    " For some reason Vim no longer wants to talk to the OS X pasteboard through "*.
+    " Computers are bullshit.
+    function! g:CopyTheTextPlease()
+        let old_z = @z
+        normal! gv"zy
+        call system('pbcopy', @z)
+        let @z = old_z
+    endfunction
+    noremap <leader>p :silent! set paste<CR>"*p:set nopaste<CR>
+    vnoremap <leader>y :<c-u>call g:CopyTheTextPlease()<cr>
 " }
 
 " Plugins {
