@@ -30,11 +30,12 @@
     set viewoptions=folds,options,cursor,unix,slash " better unix / windows compatibility
     set history=1000                " keep 1000 lines of command line history
     "set spell                      " spell checking on
-    set spelllang=en_us             " Set spelling language.
+    set spelllang=en_us,it          " Set spelling language.
 
     set backup                      " Backups are nice
     set noswapfile
 
+    " Undo
     if has('persistent_undo')
         set undofile                " So is persistent undo ...
         set undolevels=1000         " Maximum number of changes that can be undone
@@ -80,17 +81,16 @@
 " }
 
 " Vim UI {
+    " Display options
     set t_Co=256                    " enable 256 colors
     " let g:solarized_termcolors = 256
     " let g:solarized_contrast = "high"
-    " let g:solarized_degrade = 0
+    " let g:solarized_termtrans = 1
     set background=dark             " assume a dark background
-    colorscheme wombat "solarized molokai ir_black blackboard mustang matlabdark  matlablight
+    colorscheme  wombat "solarized molokai ir_black blackboard mustang matlabdark  matlablight
 
     set showmode                    " display the current mode
-
     set cursorline                  " highlight current line
-    " hi CursorLine guibg=#333333    " highlight bg color of current line
 
     if has("gui_running")
         if has("gui_gtk2")
@@ -108,14 +108,6 @@
 
     set backspace=indent,eol,start  " allow backspacing over everything in insert mode
     set nu                          " show line numbers
-    set showmatch                   " show matching brackets
-    set incsearch                   " find as you type search
-    set hlsearch                    " highlight words when searching for them.
-    set ignorecase                  " ignore case in search patterns
-    set smartcase                   " override ignorecase when pattern contains uppomnifunomnifunccomnifuncercase
-    set smarttab                    " When on, a <Tab> in front of a line inserts blanks according to 'shiftwidth'.
-    set wildmenu                    " magic for completion at the : command line"
-    set wildmode=longest,list,full  " command <Tab> completion, list matches, then longest common part, then all.
     set scrolljump=5                " lines to scroll when cursor leaves screen
     set scrolloff=3                 " minimum lines to keep above and below cursor
     set sidescroll=5                " minimal number of columns to scroll horizontally
@@ -133,6 +125,24 @@
     set ttyfast
     set nofoldenable
     set autochdir                   " Automatically set current directory as working directory
+  
+    " Tab completion in command line mode
+    set wildmenu                    " magic for completion at the : command line"
+    set wildmode=longest,list,full  " command <Tab> completion, list matches, then longest common part, then all.
+    set wildcharm=<TAB>
+    set wildignore=*.pyc,*.pdf      " ignore file pattern"
+
+    " Matching characters
+    set showmatch                   " show matching brackets
+    set matchpairs+=<:>             " Make < and > match as well"
+
+    " Seach options
+    set incsearch                   " find as you type search
+    set hlsearch                    " highlight words when searching for them.
+    set ignorecase                  " ignore case in search patterns
+    set infercase                   " infer case in search patterns
+    set smartcase                   " override ignorecase when pattern contains uppomnifunomnifunccomnifuncercase
+    
 " }
 
 " Formatting {
@@ -141,14 +151,16 @@
     set linebreak                   " wrap at breakat characters
     set nolist
     set autoindent                  " always set autoindenting on
+    set smartindent                 " enable nice indent"
     "set colorcolumn=85             " Shows a colored columne at 85
     set diffopt+=iwhite             " ignore whitespaces in diffs
-    set expandtab                   " use the appropriate number of spaces to insert a <tab>
-    set tabstop=4                   " Better not to touch this
     set nojoinspaces                " No double spaces after a join command.
     set shiftwidth=4                " number of spaces to use for each (auto)indent step
     set shiftround                  " round indent to multiple of 'shiftwidth'
+    set expandtab                   " use the appropriate number of spaces to insert a <tab>
+    set tabstop=4                   " Better not to touch this
     set softtabstop=4               " let backspace delete indent
+    set smarttab                    " When on, a <Tab> in front of a line inserts blanks according to 'shiftwidth'.
 " }
 
 " Key (re)Mappings {
