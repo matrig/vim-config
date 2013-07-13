@@ -15,6 +15,7 @@ To add another package hosted on github as a submodule:
 
     git submodule add git://github.com/path_to/submodule.git ./bundle/submodule_name    
     git submodule init && git submodule update
+    git submodule foreach git submodule init && git submodule foreach git submodule update
     
 Updating all submodules
 -----------------------
