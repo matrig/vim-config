@@ -43,3 +43,6 @@
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
+[submodule "bundle/sexy_scroller"]
+	path = bundle/sexy_scroller
+	url = https://github.com/joeytwiddle/sexy_scroller.vim.git
