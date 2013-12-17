@@ -49,3 +49,9 @@
 [submodule "bundle/multichange"]
 	path = bundle/multichange
 	url = git://github.com/AndrewRadev/multichange.vim.git
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = git://github.com/bling/vim-airline
+[submodule "bundle/goyo"]
+	path = bundle/goyo
+	url = git://github.com/junegunn/goyo.vim
