@@ -35,6 +35,8 @@
     set backup                      " Backups are nice
     set noswapfile
 
+    set complete-=i
+
     " Undo
     if has('persistent_undo')
         set undofile                " So is persistent undo ...
@@ -71,7 +73,7 @@
         " For all text files set 'textwidth' to 72 characters.
         autocmd FileType text setlocal textwidth=72
         autocmd FileType cpp,c setlocal shiftwidth=4 omnifunc=ccomplete#Complete
-        autocmd FileType python set omnifunc=pythoncomplete#Complete 
+        autocmd FileType python set omnifunc=pythoncomplete#Complete
         autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
         autocmd FileType html,xml set omnifunc=htmlcomplete#CompleteTags listchars-=tab:»·
         autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -125,7 +127,7 @@
     set ttyfast
     set nofoldenable
     set autochdir                   " Automatically set current directory as working directory
-  
+
     " Tab completion in command line mode
     set wildmenu                    " magic for completion at the : command line"
     set wildmode=longest,list,full  " command <Tab> completion, list matches, then longest common part, then all.
@@ -142,7 +144,7 @@
     set ignorecase                  " ignore case in search patterns
     set infercase                   " infer case in search patterns
     set smartcase                   " override ignorecase when pattern contains uppomnifunomnifunccomnifuncercase
-    
+
 " }
 
 " Formatting {
@@ -244,6 +246,10 @@
 " }
 
 " Plugins {
+    " airline {
+        let g:airline#extensions#tabline#enabled = 1
+    " }
+
     " Ctags {
         " This will look in the current directory for 'tags', and work up the tree towards root until one is found.
         " (generate tags with: ctags -R -f ~/vimtags /usr/lib/python2.6/)
@@ -322,7 +328,7 @@
     " Syntastic {
         let g:syntastic_enable_signs=1
         let g:syntastic_quiet_warnings=1
-	let g:syntastic_python_checkers=['pylint']
+        let g:syntastic_python_checkers=['pylint']
     " }
 
     " TagBar {
