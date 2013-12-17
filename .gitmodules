@@ -46,3 +46,6 @@
 [submodule "bundle/sexy_scroller"]
 	path = bundle/sexy_scroller
 	url = https://github.com/joeytwiddle/sexy_scroller.vim.git
+[submodule "bundle/multichange"]
+	path = bundle/multichange
+	url = git://github.com/AndrewRadev/multichange.vim.git
