@@ -23,10 +23,16 @@ followed by:
 Updating all submodules
 -----------------------
 
-To update all the submodules:
+First do:
 
-    git submodule foreach git pull origin master
+    git pull
     
-or
+Then to update all the submodules:
 
     git submodule update --recursive
+    
+Removing a submodule
+--------------------
+
+    git submodule deinit submodule_name
+    git rm submodule_name
