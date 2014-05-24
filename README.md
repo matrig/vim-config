@@ -17,16 +17,21 @@ To add another package hosted on github as a submodule:
 
 followed by:
 
-    git submodule init && git submodule update
     git submodule foreach git submodule init && git submodule foreach git submodule update
     
 Updating all submodules
 -----------------------
 
-To update all the submodules:
+First do:
 
-    git submodule foreach git pull origin master
+    git pull
     
-or
+Then to update all the submodules:
 
     git submodule update --recursive
+    
+Removing a submodule
+--------------------
+
+    git submodule deinit submodule_name
+    git rm submodule_name

@@ -144,7 +144,6 @@
     set ignorecase                  " ignore case in search patterns
     set infercase                   " infer case in search patterns
     set smartcase                   " override ignorecase when pattern contains uppomnifunomnifunccomnifuncercase
-
 " }
 
 " Formatting {
