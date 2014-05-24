@@ -352,6 +352,11 @@
         let g:undotree_SetFocusWhenToggle=1
     " }
 
+    " vim-latexsuite {
+        set grepprg=grep\ -nH\ $*
+        let g:Tex_CompileRule_dvi = 'latex -src-specials -interaction=nonstopmode $*'
+        let g:Tex_DefaultTargetFormat='pdf'
+    " }
 " }
 
 " My commands {
