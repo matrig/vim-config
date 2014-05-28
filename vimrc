@@ -338,6 +338,7 @@
         set grepprg=grep\ -nH\ $*
         let g:Tex_CompileRule_dvi = 'latex -src-specials -interaction=nonstopmode $*'
         let g:Tex_DefaultTargetFormat='pdf'
+        let g:tex_flavor='latex'
     " }
 " }
 
