@@ -316,6 +316,14 @@
         " Showmarks disabled by default (toggle with \mt):
         let g:showmarks_enable=0
     " }
+    
+    " SuperTab {
+        let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+        let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
+        let g:SuperTabContextDiscoverDiscovery =
+            \ ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+    " }
+    "
 
     " Syntastic {
         let g:syntastic_enable_signs=1
