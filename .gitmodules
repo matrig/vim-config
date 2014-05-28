@@ -58,3 +58,9 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
+[submodule "bundle/vim-autotag"]
+	path = bundle/vim-autotag
+	url = git://github.com/craigemery/vim-autotag.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://git.wincent.com/command-t.git
