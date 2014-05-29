@@ -19,8 +19,17 @@ followed by:
 
     git submodule foreach git submodule init && git submodule foreach git submodule update
     
-Updating all submodules
------------------------
+Updating all submodules after upstream change
+---------------------------------------------
+
+    git submodule foreach git pull origin master
+
+Then commit to github:
+
+    git commit -am "Pulled down update to submodules"
+
+Updating all submodules locally
+-------------------------------
 
 First do:
 
