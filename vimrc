@@ -316,7 +316,7 @@
         " Showmarks disabled by default (toggle with \mt):
         let g:showmarks_enable=0
     " }
-    
+
     " SuperTab {
         let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
         let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
