@@ -37,7 +37,7 @@ First do:
     
 Then to update all the submodules:
 
-    git submodule update --recursive
+    git submodule update --init --recursive
     
 Removing a submodule
 --------------------
