@@ -26,7 +26,7 @@ Updating all submodules after upstream change
 
 Then commit to github:
 
-    git commit -am "Pulled down update to submodules"
+    git commit -am "Pull updates to submodules"
 
 Updating all submodules locally
 -------------------------------
