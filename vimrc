@@ -144,6 +144,9 @@
     set ignorecase                  " ignore case in search patterns
     set infercase                   " infer case in search patterns
     set smartcase                   " override ignorecase when pattern contains uppomnifunomnifunccomnifuncercase
+
+    " Use system clipboard for copy and paste
+    set clipboard=unnamedplus
 " }
 
 " Formatting {
