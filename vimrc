@@ -89,7 +89,7 @@
     " let g:solarized_contrast = "high"
     " let g:solarized_termtrans = 1
     set background=dark             " assume a dark background
-    colorscheme  wombat "solarized molokai ir_black blackboard mustang matlabdark  matlablight
+    colorscheme  wombat "grb256 solarized molokai ir_black blackboard mustang matlabdark  matlablight
 
     set showmode                    " display the current mode
     set cursorline                  " highlight current line
