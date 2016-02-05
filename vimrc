@@ -184,6 +184,9 @@
     " let's you become sudo after loading, before saving
     cmap w!! w !sudo tee % >/dev/null
 
+    " Delete all trailing whitespace
+    nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
     " Toggle spell checking for the current buffer with Ctrl-i
     map <silent> <F6> :setlocal invspell<CR>
     imap <silent> <F6> <ESC>:setlocal invspell<CR>a
